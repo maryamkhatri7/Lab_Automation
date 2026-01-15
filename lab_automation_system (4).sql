@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2026 at 02:44 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jan 15, 2026 at 05:14 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -342,15 +342,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `full_name`, `email`, `phone`, `user_type`, `is_active`, `created_at`, `last_login`) VALUES
-(1, 'admin', '0192023a7bbd73250516f069df18b500', 'System Administrator', 'admin@electrical.com', '', 'Admin', 1, '2026-01-10 15:26:19', '2026-01-15 13:34:40'),
-(4, 'tester', '8e607a4752fa2e59413e5790536f2b42', 'Products Tester', 'tester@electrical.com', NULL, 'Tester', 1, '2026-01-10 18:13:33', '2026-01-15 13:09:20'),
-(7, 'supervisor', '1425d5d3160aa6bd140605cc75e63ce0', 'Lab Supervisor', 'supervisor@electrical.com', '', 'Supervisor', 1, '2026-01-11 12:01:10', '2026-01-15 13:08:54'),
-(8, ' Ayesha Khan', '85956cfc4eb3e24dab3dad26f9fb5dfa', 'Engr. Ayesha Khan', 'AyeshaKhan@gmail.com', '03133333324', 'Tester', 1, '2026-01-15 13:38:11', NULL),
-(9, 'Salman R.', 'a32de55ffd7a9c4101a0c5c8788b38ed', 'Engr. Salman R.', 'Salman@gmail.com', '03188194456', 'Tester', 1, '2026-01-15 13:39:19', NULL),
-(10, 'Hamza Ali', '541e4a621a37b8ce7233d32a81361f42', 'Engr. Hamza Ali', 'HamzaAli@gmail.com', '03188199345', 'Tester', 1, '2026-01-15 13:40:12', NULL),
-(11, ' Bilal Ahmed', 'eaa0f04cd65cdaa1ae35337209a23906', 'Engr. Bilal Ahmed', 'BilalAhmed@gmail.com', '03188199165', 'Tester', 1, '2026-01-15 13:41:02', NULL),
-(12, 'Sara Malik', 'c9340144509f31a9575771719781a0e0', 'Engr. Sara Malik', 'SaraMalik@gmail.com', '03188199175', 'Tester', 1, '2026-01-15 13:41:43', NULL),
-(13, 'Usman Tariq', 'eb81a6cedc0c39492ebc881968f05b6c', 'Engr. Usman Tariq', 'Usman@gmail.com', '03188193487', 'Tester', 1, '2026-01-15 13:42:21', NULL);
+(1, 'admin', '0192023a7bbd73250516f069df18b500', 'System Administrator', 'admin@electrical.com', '', 'Admin', 1, '2026-01-10 15:26:19', '2026-01-15 15:55:50'),
+(4, 'tester', '8e607a4752fa2e59413e5790536f2b42', 'Products Tester', 'tester@electrical.com', NULL, 'Tester', 1, '2026-01-10 18:13:33', '2026-01-15 16:05:16'),
+(7, 'supervisor', '1425d5d3160aa6bd140605cc75e63ce0', 'Lab Supervisor', 'supervisor@electrical.com', '', 'Supervisor', 1, '2026-01-11 12:01:10', '2026-01-12 20:17:39'),
+(8, 'Ayesha Khan', '630f75c0f4ec720d82101f62faf45cef', 'Engr. Ayesha Khan', 'AyeshaKhan@electrical.com', '03188199123', 'Admin', 1, '2026-01-15 15:57:23', NULL),
+(9, 'Salman R.', 'a32de55ffd7a9c4101a0c5c8788b38ed', 'Engr. Salman R.', 'Salman@electrical.com', '0313456108', 'Tester', 1, '2026-01-15 15:58:29', NULL),
+(10, 'Hamza Ali', '541e4a621a37b8ce7233d32a81361f42', 'Engr. Hamza Ali', 'Hamza@electrical.com', '03133333108', 'Tester', 1, '2026-01-15 15:59:25', NULL),
+(11, 'Bilal Ahmed', 'c9eff98c074e9d62fd5fcec0541444a2', 'Engr. Bilal Ahmed', 'BilalAhmed@electrical.com', '03188133332', 'Tester', 1, '2026-01-15 16:00:29', NULL),
+(12, 'Sara Malik', '01539cec5a2b8a86ac73e385a7485c7f', 'Engr. Sara Malik', 'SaraMalik@electrical.com', '03188134764', 'Tester', 1, '2026-01-15 16:01:15', NULL),
+(13, 'Usman Tariq', 'd6f4fb87d6ea63fe04a31ba506dc54b1', 'Engr. Usman Tariq', 'UsmanTariq@electrical.com', '03183876532', 'Tester', 1, '2026-01-15 16:02:22', NULL);
 
 -- --------------------------------------------------------
 
@@ -550,28 +550,24 @@ INSERT INTO `user_logs` (`log_id`, `user_id`, `action`, `table_affected`, `recor
 (176, 7, 'Logged out', NULL, NULL, '::1', '2026-01-12 20:17:28'),
 (177, 7, 'Logged in', NULL, NULL, '::1', '2026-01-12 20:17:39'),
 (178, 7, 'Logged out', NULL, NULL, '::1', '2026-01-12 20:19:12'),
-(179, 4, 'Logged in', NULL, NULL, '::1', '2026-01-15 12:45:09'),
-(180, 4, 'Logged out', NULL, NULL, '::1', '2026-01-15 12:45:32'),
-(181, 7, 'Logged in', NULL, NULL, '::1', '2026-01-15 12:46:32'),
-(182, 7, 'Logged out', NULL, NULL, '::1', '2026-01-15 12:54:51'),
-(183, 4, 'Logged in', NULL, NULL, '::1', '2026-01-15 12:55:01'),
-(184, 4, 'Logged out', NULL, NULL, '::1', '2026-01-15 13:06:54'),
-(185, 1, 'Logged in', NULL, NULL, '::1', '2026-01-15 13:08:10'),
-(186, 1, 'Logged out', NULL, NULL, '::1', '2026-01-15 13:08:45'),
-(187, 7, 'Logged in', NULL, NULL, '::1', '2026-01-15 13:08:54'),
-(188, 7, 'Updated product status', 'products', '0000010101', '::1', '2026-01-15 13:09:03'),
-(189, 7, 'Logged out', NULL, NULL, '::1', '2026-01-15 13:09:13'),
-(190, 4, 'Logged in', NULL, NULL, '::1', '2026-01-15 13:09:20'),
-(191, 4, 'Logged out', NULL, NULL, '::1', '2026-01-15 13:21:58'),
-(192, 1, 'Logged in', NULL, NULL, '::1', '2026-01-15 13:29:33'),
-(193, 1, 'Logged out', NULL, NULL, '::1', '2026-01-15 13:30:51'),
-(194, 1, 'Logged in', NULL, NULL, '::1', '2026-01-15 13:34:40'),
-(195, 1, 'Added user', 'users', ' Ayesha Khan', '::1', '2026-01-15 13:38:11'),
-(196, 1, 'Added user', 'users', 'Salman R.', '::1', '2026-01-15 13:39:19'),
-(197, 1, 'Added user', 'users', 'Hamza Ali', '::1', '2026-01-15 13:40:12'),
-(198, 1, 'Added user', 'users', ' Bilal Ahmed', '::1', '2026-01-15 13:41:02'),
-(199, 1, 'Added user', 'users', 'Sara Malik', '::1', '2026-01-15 13:41:43'),
-(200, 1, 'Added user', 'users', 'Usman Tariq', '::1', '2026-01-15 13:42:21');
+(179, 7, 'Logged out', NULL, NULL, '::1', '2026-01-15 15:55:26'),
+(180, 1, 'Logged in', NULL, NULL, '::1', '2026-01-15 15:55:50'),
+(181, 1, 'Added user', 'users', 'Ayesha Khan', '::1', '2026-01-15 15:57:23'),
+(182, 1, 'Added user', 'users', 'Salman R.', '::1', '2026-01-15 15:58:29'),
+(183, 1, 'Added user', 'users', 'Hamza Ali', '::1', '2026-01-15 15:59:25'),
+(184, 1, 'Added user', 'users', 'Bilal Ahmed', '::1', '2026-01-15 16:00:29'),
+(185, 1, 'Added user', 'users', 'Sara Malik', '::1', '2026-01-15 16:01:15'),
+(186, 1, 'Added user', 'users', 'Usman Tariq', '::1', '2026-01-15 16:02:22'),
+(187, 1, 'Edited user', 'users', 'Usman Tariq', '::1', '2026-01-15 16:03:21'),
+(188, 1, 'Edited user', 'users', 'Usman Tariq', '::1', '2026-01-15 16:03:25'),
+(189, 1, 'Edited user', 'users', 'Sara Malik', '::1', '2026-01-15 16:03:44'),
+(190, 1, 'Edited user', 'users', 'Bilal Ahmed', '::1', '2026-01-15 16:03:58'),
+(191, 1, 'Edited user', 'users', 'Hamza Ali', '::1', '2026-01-15 16:04:13'),
+(192, 1, 'Edited user', 'users', 'Salman R.', '::1', '2026-01-15 16:04:33'),
+(193, 1, 'Edited user', 'users', 'Ayesha Khan', '::1', '2026-01-15 16:04:47'),
+(194, 1, 'Logged out', NULL, NULL, '::1', '2026-01-15 16:05:03'),
+(195, 4, 'Logged in', NULL, NULL, '::1', '2026-01-15 16:05:16'),
+(196, 4, 'Logged out', NULL, NULL, '::1', '2026-01-15 16:05:24');
 
 -- --------------------------------------------------------
 
@@ -631,7 +627,7 @@ CREATE TABLE `v_remanufacturing_required` (
 --
 DROP TABLE IF EXISTS `v_cpri_ready_products`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_cpri_ready_products`  AS SELECT `p`.`product_id` AS `product_id`, `p`.`product_name` AS `product_name`, `pt`.`product_type_name` AS `product_type_name`, `p`.`batch_number` AS `batch_number`, count(`t`.`test_id`) AS `total_tests`, sum(case when `t`.`test_status` = 'Passed' then 1 else 0 end) AS `passed_tests` FROM ((`products` `p` join `product_types` `pt` on(`p`.`product_type_id` = `pt`.`product_type_id`)) left join `tests` `t` on(`p`.`product_id` = `t`.`product_id`)) WHERE `p`.`current_status` = 'Passed' GROUP BY `p`.`product_id` HAVING `total_tests` = `passed_tests` AND `total_tests` > 00  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_cpri_ready_products`  AS SELECT `p`.`product_id` AS `product_id`, `p`.`product_name` AS `product_name`, `pt`.`product_type_name` AS `product_type_name`, `p`.`batch_number` AS `batch_number`, count(`t`.`test_id`) AS `total_tests`, sum(case when `t`.`test_status` = 'Passed' then 1 else 0 end) AS `passed_tests` FROM ((`products` `p` join `product_types` `pt` on(`p`.`product_type_id` = `pt`.`product_type_id`)) left join `tests` `t` on(`p`.`product_id` = `t`.`product_id`)) WHERE `p`.`current_status` = 'Passed' GROUP BY `p`.`product_id` HAVING `total_tests` = `passed_tests` AND `total_tests` > 0 ;
 
 -- --------------------------------------------------------
 
@@ -640,7 +636,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `v_product_testing_summary`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_product_testing_summary`  AS SELECT `p`.`product_id` AS `product_id`, `p`.`product_name` AS `product_name`, `pt`.`product_type_name` AS `product_type_name`, `p`.`batch_number` AS `batch_number`, `p`.`current_status` AS `current_status`, count(`t`.`test_id`) AS `total_tests`, sum(case when `t`.`test_status` = 'Passed' then 1 else 0 end) AS `passed_tests`, sum(case when `t`.`test_status` = 'Failed' then 1 else 0 end) AS `failed_tests`, sum(case when `t`.`test_status` = 'Pending' then 1 else 0 end) AS `pending_tests`, `p`.`created_at` AS `product_created_date` FROM ((`products` `p` left join `product_types` `pt` on(`p`.`product_type_id` = `pt`.`product_type_id`)) left join `tests` `t` on(`p`.`product_id` = `t`.`product_id`)) GROUP BY `p`.`product_id``product_id`  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_product_testing_summary`  AS SELECT `p`.`product_id` AS `product_id`, `p`.`product_name` AS `product_name`, `pt`.`product_type_name` AS `product_type_name`, `p`.`batch_number` AS `batch_number`, `p`.`current_status` AS `current_status`, count(`t`.`test_id`) AS `total_tests`, sum(case when `t`.`test_status` = 'Passed' then 1 else 0 end) AS `passed_tests`, sum(case when `t`.`test_status` = 'Failed' then 1 else 0 end) AS `failed_tests`, sum(case when `t`.`test_status` = 'Pending' then 1 else 0 end) AS `pending_tests`, `p`.`created_at` AS `product_created_date` FROM ((`products` `p` left join `product_types` `pt` on(`p`.`product_type_id` = `pt`.`product_type_id`)) left join `tests` `t` on(`p`.`product_id` = `t`.`product_id`)) GROUP BY `p`.`product_id` ;
 
 -- --------------------------------------------------------
 
@@ -649,7 +645,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `v_remanufacturing_required`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_remanufacturing_required`  AS SELECT `p`.`product_id` AS `product_id`, `p`.`product_name` AS `product_name`, `pt`.`product_type_name` AS `product_type_name`, `t`.`test_id` AS `test_id`, `tt`.`test_type_name` AS `test_type_name`, `t`.`failure_reason` AS `failure_reason`, `t`.`test_date` AS `test_date`, `u`.`full_name` AS `tester_name` FROM ((((`products` `p` join `product_types` `pt` on(`p`.`product_type_id` = `pt`.`product_type_id`)) join `tests` `t` on(`p`.`product_id` = `t`.`product_id`)) join `test_types` `tt` on(`t`.`test_type_id` = `tt`.`test_type_id`)) join `users` `u` on(`t`.`tester_id` = `u`.`user_id`)) WHERE `t`.`test_status` = 'Failed' AND `p`.`current_status` = 'Failed''Failed'  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_remanufacturing_required`  AS SELECT `p`.`product_id` AS `product_id`, `p`.`product_name` AS `product_name`, `pt`.`product_type_name` AS `product_type_name`, `t`.`test_id` AS `test_id`, `tt`.`test_type_name` AS `test_type_name`, `t`.`failure_reason` AS `failure_reason`, `t`.`test_date` AS `test_date`, `u`.`full_name` AS `tester_name` FROM ((((`products` `p` join `product_types` `pt` on(`p`.`product_type_id` = `pt`.`product_type_id`)) join `tests` `t` on(`p`.`product_id` = `t`.`product_id`)) join `test_types` `tt` on(`t`.`test_type_id` = `tt`.`test_type_id`)) join `users` `u` on(`t`.`tester_id` = `u`.`user_id`)) WHERE `t`.`test_status` = 'Failed' AND `p`.`current_status` = 'Failed' ;
 
 --
 -- Indexes for dumped tables
@@ -843,7 +839,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_logs`
 --
 ALTER TABLE `user_logs`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
 
 --
 -- Constraints for dumped tables
