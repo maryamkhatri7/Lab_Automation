@@ -20,7 +20,7 @@
           <ul>
             <li><a href="#products">Lab Scope</a></li>
             <li><a href="#process">Process</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=923001234567&text=Lab%20Automation">Contact</a></li>
           </ul>
         </div>
       </div>

@@ -62,7 +62,7 @@ $product_types = $conn->query("SELECT * FROM product_types WHERE is_active = 1 O
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product - Admin Panel</title>
-    <link rel="stylesheet" href="../supervisor/public/style.css">
+<link rel="stylesheet" href="../../supervisor/public/style.css">
 
     <style>
         * {
@@ -82,55 +82,7 @@ $product_types = $conn->query("SELECT * FROM product_types WHERE is_active = 1 O
             min-height: 100vh;
         }
         
-        .sidebar {
-            width: 250px;
-            background: #2c3e50;
-            color: white;
-            padding: 20px 0;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-        }
-        
-        .sidebar-header {
-            padding: 0 20px 20px;
-            border-bottom: 1px solid #34495e;
-        }
-        
-        .sidebar-header h2 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        .sidebar-header p {
-            font-size: 13px;
-            color: #bdc3c7;
-        }
-        
-        .sidebar-menu {
-            list-style: none;
-            padding: 20px 0;
-        }
-        
-        .sidebar-menu li {
-            margin-bottom: 5px;
-        }
-        
-        .sidebar-menu a {
-            display: block;
-            padding: 12px 20px;
-            color: #ecf0f1;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        
-        .sidebar-menu a:hover {
-            background: #34495e;
-            border-left: 3px solid #3498db;
-        }
-        
         .main-content {
-            margin-left: 250px;
             flex: 1;
             padding: 30px;
         }
